@@ -15,10 +15,16 @@ LABEL   devoply.type="site" \
 RUN apk update \
     && apk add bash less vim nginx ca-certificates \
     php-fpm php-json php-zlib php-xml php-pdo php-phar php-openssl \
+<<<<<<< HEAD
     php-pdo_mysql php-mysqli postfix\
     php-gd php-iconv php-mcrypt \
+=======
+    php-pdo_mysql php-mysqli \
+    php-gd php-iconv php-mcrypt postfix \
+>>>>>>> 562a6a42ff0e07b014bc4de7755121c9885495ed
     php-mysql php-curl php-opcache php-ctype php-apcu \
-    php-intl php-bcmath php-dom php-xmlreader mysql-client && apk add -u musl
+    php-intl php-bcmath php-dom php-xmlreader mysql-client && \
+    apk add -u musl
 
 RUN rm -rf /var/cache/apk/*
 
