@@ -36,7 +36,7 @@ ADD files/run.sh /
 RUN chmod +x /run.sh
 ADD files/postfix/setup_ses.sh /setup_ses.sh
 RUN chmod +x /setup_ses.sh && /setup_ses.sh
-
+ADD files/postfix/main.cf /etc/postfix/main.cf
 
 
 EXPOSE 80
